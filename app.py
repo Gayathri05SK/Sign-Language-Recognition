@@ -25,7 +25,7 @@ def home():
     st.title("🤟 Sign Language Recognition Project 🤟")
 
     # Display the image
-    st.image("C:/Users/ADMIN/Downloads/hand_sign(2)/hand_sign(1)/hand_sign/asl1.jpg", caption="Sign Language Recognition", use_column_width=False,width=1000)
+    st.image("asl1.jpg", caption="Sign Language Recognition", use_column_width=False,width=1000)
 
 # Data Collection Functionality
 def data_collection():
