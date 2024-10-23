@@ -37,7 +37,7 @@ def data_collection():
     stop_webcam = st.button("Stop Webcam")
 
     if start_webcam and not st.session_state.get('webcam_running', False):
-        cap = cv2.VideoCapture(0)
+        cap = cv2.VideoCapture(1)
         st.session_state['webcam_running'] = True  # Set the webcam running state
         labels = [chr(i) for i in range(65, 91)]  # A-Z
         folder = data_path
