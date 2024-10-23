@@ -14,7 +14,7 @@ from collections import Counter
 st.set_page_config(page_title="Sign Language Recognition", page_icon="🤟", layout="wide")
 
 # Paths and configurations
-data_path = "C:/Users/ADMIN/Downloads/hand_sign(2)/hand_sign(1)/hand_sign/Data"
+data_path = "Data"
 model_path = 'hand_sign_model.h5'
 img_size = (300, 300)
 offset = 20
