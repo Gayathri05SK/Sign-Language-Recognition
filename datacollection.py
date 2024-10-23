@@ -4,13 +4,13 @@ import numpy as np
 import os
 import math
 import time
-
+            
 # Setup
 cap = cv2.VideoCapture(0)
 detector = HandDetector(maxHands=1)
 
 # Set your output folder path
-folder = "C:/Users/ADMIN/Downloads/hand_sign(2)/hand_sign(1)/hand_sign/Data/A"  # Change this to the folder path where you want to save data
+folder = "C:/Users/bhava/Desktop/ML PROJECT/hand_sign(1)/hand_sign/Data/A"  # Change this to the folder path where you want to save data
 labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 offset = 20
 imgSize = 300
