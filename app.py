@@ -14,7 +14,7 @@ from collections import Counter
 st.set_page_config(page_title="Sign Language Recognition", page_icon="🤟", layout="wide")
 
 # Paths and configurations
-data_path = "C:/Users/bhava/Desktop/ML PROJECT/hand_sign(1)/hand_sign/Data"
+data_path = "C:/Users/ADMIN/Downloads/hand_sign(2)/hand_sign(1)/hand_sign/Data"
 model_path = 'hand_sign_model.h5'
 img_size = (300, 300)
 offset = 20
@@ -25,7 +25,7 @@ def home():
     st.title("🤟 Sign Language Recognition Project 🤟")
 
     # Display the image
-    st.image("C:/Users/bhava/Desktop/ML PROJECT/hand_sign(1)/hand_sign/asl1.jpg", caption="Sign Language Recognition", use_column_width=False,width=1000)
+    st.image("asl1.jpg", caption="Sign Language Recognition", use_column_width=False,width=1000)
 
 # Data Collection Functionality
 def data_collection():
@@ -105,26 +105,7 @@ def eda():
     image_sizes = []
     intensity_distributions = []
     missing_images = []
-    
-    st.write("### Sample Images for Each Letter (A-Z)")
-    cols = st.columns(6)  # Create 6 columns for displaying sample images
 
-    # Loop through each class folder (A-Z) and display a sample image
-    for i, class_folder in enumerate(sorted(os.listdir(data_path))):
-        class_folder_path = os.path.join(data_path, class_folder)
-        if os.path.isdir(class_folder_path):
-            # Get the list of images in the class folder
-            image_files = os.listdir(class_folder_path)
-            if image_files:
-                # Display the first image as a sample
-                sample_image_path = os.path.join(class_folder_path, image_files[0])
-                img = cv2.imread(sample_image_path)
-                img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  # Convert to RGB for displaying in Streamlit
-                
-                with cols[i % 6]:  # Place the image in one of the 6 columns
-                    st.image(img_rgb, caption=class_folder, use_column_width=True)
-
-    st.write("### Class Distribution")
     for class_folder in os.listdir(data_path):
         class_folder_path = os.path.join(data_path, class_folder)
         if os.path.isdir(class_folder_path):
@@ -141,6 +122,7 @@ def eda():
                 except Exception as e:
                     missing_images.append(image_path)
 
+    st.write("### Class Distribution")
     st.bar_chart(class_counts)
 
     st.write("### Image Sizes and Resolutions")
@@ -157,6 +139,7 @@ def eda():
         st.write(f"Missing or corrupt images: {len(missing_images)}")
     else:
         st.write("No missing or corrupt images found.")
+
 # Training Functionality
 def train_model():
     st.title("Model Training")
@@ -221,7 +204,7 @@ def train_model():
         # Train Model
         model.fit(train_data, validation_data=val_data, epochs=10)
         model.save(model_path)
-        st.write("Training Completed. Model Saved as hand_sign_model.h5.")
+        st.write("Training Completed. Model Saved as `hand_sign_model.h5`.")
 
 # Testing Functionality
 def test_model():
@@ -317,8 +300,8 @@ with st.sidebar:
     st.write("---")
     st.title("🔍 How to Use")
     st.write("Navigate between the tasks:")
-    st.write("1. *Data Collection*: Capture images using the webcam.")
-    st.write("2. *EDA*: Explore the dataset statistics and graphs.")
-    st.write("3. *Train Model*: Train the CNN model.")
-    st.write("4. *Test Model*: Make predictions with the trained model.")
+    st.write("1. **Data Collection**: Capture images using the webcam.")
+    st.write("2. **EDA**: Explore the dataset statistics and graphs.")
+    st.write("3. **Train Model**: Train the CNN model.")
+    st.write("4. **Test Model**: Make predictions with the trained model.")
     st.write("---")
