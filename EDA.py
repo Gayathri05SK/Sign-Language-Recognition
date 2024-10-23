@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from collections import Counter
 
 # Define the path to your dataset folder
-data_dir = 'C:/Users/ADMIN/Downloads/hand_sign(2)/hand_sign(1)/hand_sign/Data/'
+data_dir = 'C:/Users/bhava/Desktop/ML PROJECT/hand_sign(1)/hand_sign/Data'
 
 # Initialize variables for analysis
 class_counts = Counter()
