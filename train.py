@@ -6,7 +6,7 @@ from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 from keras.models import load_model
 
 # Path to data folder
-data_path = "C:/Users/bhava/Desktop/ML PROJECT/hand_sign(1)/hand_sign/Data"
+data_path = "C:/Users/ADMIN/Downloads/hand_sign(2)/hand_sign(1)/hand_sign/Data/"
 
 # Image size and batch size
 img_size = (300, 300)
