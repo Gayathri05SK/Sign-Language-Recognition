@@ -45,7 +45,7 @@ namex==0.0.8
 narwhals==1.10.0
 numpy==1.26.4
 oauthlib==3.2.2
-opencv-python-headless==4.10.0.84  # Use only headless version
+opencv-python-headless==4.10.0.84  # Only headless version
 opt-einsum==3.4.0
 optree==0.13.0
 packaging==24.1
@@ -84,7 +84,7 @@ termcolor==2.5.0
 threadpoolctl==3.5.0
 toml==0.10.2
 tornado==6.4.1
-typing_extensions==4.12.2
+typing-extensions==4.12.2
 tzdata==2024.2
 urllib3==2.2.3
 watchdog==5.0.3
