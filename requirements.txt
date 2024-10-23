@@ -45,8 +45,8 @@ namex==0.0.8
 narwhals==1.10.0
 numpy==1.26.4
 oauthlib==3.2.2
-opencv-contrib-python==4.10.0.84
-opencv-python-headless==4.10.0.84  # Avoids GUI requirements
+opencv-contrib-python==4.10.0.84  # Keep this if you need extra OpenCV modules, else remove
+opencv-python-headless==4.10.0.84  # This is the only OpenCV version you should use for headless environments
 opt-einsum==3.4.0
 optree==0.13.0
 packaging==24.1
