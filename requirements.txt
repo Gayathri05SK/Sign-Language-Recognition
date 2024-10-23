@@ -39,14 +39,13 @@ markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 matplotlib==3.9.2
 mdurl==0.1.2
-mediapipe==0.10.15  # Added the missing mediapipe
+mediapipe==0.10.15
 ml-dtypes==0.2.0
 namex==0.0.8
 narwhals==1.10.0
 numpy==1.26.4
 oauthlib==3.2.2
-opencv-contrib-python==4.10.0.84  # Keep this if you need extra OpenCV modules, else remove
-opencv-python-headless==4.10.0.84  # This is the only OpenCV version you should use for headless environments
+opencv-python-headless==4.10.0.84  # Use only headless version
 opt-einsum==3.4.0
 optree==0.13.0
 packaging==24.1
